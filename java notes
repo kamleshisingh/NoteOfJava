@@ -1,0 +1,12 @@
+what is java?
+java is an object oriented programing language.
+
+What is "new" keyword in the java code?
+In Java, the "new" keyword is used to create an object of a 
+class. It is used to allocate memory space for the object 
+and to initialize its instance variables.
+
+what is the constructor in java?
+A constructor is a special method that is used to create and 
+initialize objects of a class. 
+
