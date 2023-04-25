@@ -9,5 +9,257 @@ and to initialize its instance variables.
 what is the constructor in java?
 A constructor is a special method that is used to create and 
 initialize objects of a class. 
+we can call constructor only once whenever we construct/create 
+an object.
+The name of the constructor is the name of the class without 
+any return type.
+there are 2 type of constructor 
+1. Parameterized Constructor 
+    Example=> public MyClass(int a){}
+2. Non-Paramerterozed Constructor 
+    Example=> public MyClass(){}
 
+<<<<<<< HEAD
 wha
+=======
+what do you know about Oops?
+Oops is stand for object oriented programing System.
+there are mainly 4 piler of Oops
+1.Pollymorphism
+2. Inheritance
+3. Encapsulation
+4. Abstraction
+
+Pollymorphism:> 
+  When we do any task in multiple ways that is we call polymorphism in 
+  java
+  there are 2 main type of polymorphism 
+  1> Method Overloading :> this is a compile time  polymorphism in this  
+                           we are reusing the methodname by changing the 
+                           parameters of the method or constructor.
+                           we use this with in the class .
+                           example :> 
+                           class name {
+                                public void nameIs(){}
+                                public void nameIs(Strubg name){}
+                                public name(){}
+                                public name(int n)()
+                                }
+  2> Method Overriding :>This  is a run time pollymorphism. 
+  
+  Inheritance:> 
+    In java , when any class want to access any other class properties.
+    that process in java called inheritance.
+    it is go like 
+    parent --> child ---> superchile
+    we use "extends" keyword to inherit the property of parent class
+    example:> class Parent{
+        String color;
+        }
+        class Child extends Parent
+        {
+        }
+        public class ExicutionClass{
+        public static void main(String []arg)
+        {
+        Chile ch = new Chile();
+        ch.color = "Black";
+        }
+        }
+    Type of Inheritance:>
+    1. Single Level Inheritance 
+        :> Parent --> Child
+    2. Multilevel Inheritance 
+        :> Parent --> Child --> SuperChild
+    3. Hierarical Inheritance 
+        :> Parent --> Child1
+           Parent --> Child2 
+           " In this two or More class inherting a property of the on class"
+    4. Multiple Inheritance
+    we can not achive this type of inheritance in java but we can achieve 
+    this by using Interface java. We Need 100% of abstraction for achieve 
+    this type of inheritance in java. 
+        :>Parent1 --> Child
+          Parent2 --> Child
+          " In this, one class is inhiting the property of multiple class."
+    5. Hybrid Inharitance 
+        :>  When we are using more than 1 inheritance in one in a single 
+            project that is we call the multiple inheritance.
+    
+    Access modifier :> 
+      In java, Access modifier is a keyword that dertermine the accessebility 
+      of the class, method and constructor
+      There are mainly 4 type of accesmodifier used in java:
+      1.public  :>  A public class, method, or variable can be accessed from
+                    anywhere in the program.
+      2.private :>  A private class, method, or variable can only be accessed
+                    from within the same class.
+      3.protected:>  A protected class, method, or variable can be accessed from 
+                     within the same class, as well as from any subclass (even if
+                     the subclass is in a different package).
+      4.default:>    A class, method, or variable with no access modifier (also 
+                     called "package-private") can be accessed only from within
+                     the same package.
+      
+    Encapsulation :>
+      In Java, encapsulation is a mechanism that allows you to hide the implementation
+      details of a class from other parts of the program, and expose only the necessary
+      information or methods through a public interface.
+       Encapsulation involves grouping related variables and methods together into a single
+       unit called a class, and controlling access to the variables and methods using access
+       modifiers such as public, private, and protected. 
+       by using Geter and seter we can access those protected and private method and constructor
+       in publice class.
+       example:>
+                class Account{
+                String name;
+                public String email;
+                protected string password;
+                public String getPassword()
+                {
+                return this.password;
+                }
+                public void setPassword(String pass)
+                {
+                this.passord=pass;
+                }
+                }
+                public class Mainclass
+                {
+                public static void main(String []arg)
+                {
+                Account ac1 = new Account();
+                ac1.name="saurabh";
+                ac1.email="saurabh@gmail.com";
+                ac1.setPassword("qwer");
+                String str =  ac1.getPassword();
+                System.out.println("password = "+str);
+                }
+                }
+      
+******** Difference Between Encapsulation and Abstraction :>
+        Data hideing is the process of protecting member of class from unintended changes,
+        Whereas , Abstraction is hideing implimentation details and Showing only 
+        importand/useful parts to the user.  
+        
+        Abstraction :>
+          In Java, abstraction is a mechanism that allows you to represent complex systems
+          or concepts in a simplified and more general way, by focusing on the essential 
+          features and ignoring the non-essential details.
+          we can acheive abstraction by to methods:>
+          1. Abstract class: 
+                          in this you can acheiver 0 to 100% of abstraction
+                          means not all the method  are abstract method in the abstract class.
+                          example:>
+                          abstract class Animal()
+                          {
+                          abstract void walk();
+                          public void run() {
+                          System.out.println("animal can walk")
+                          }
+                          public Animal()
+                          {
+                          System.out.println("this animal's constructor")
+                          }
+                          }
+                          
+                          class Dogs estends Animal{
+                          {
+                          public void walk()
+                          {
+                          System.out.println(" dog can walk on 4 legs ");
+                          }
+                          }
+                          class Chicken extends Animal
+                          {
+                          public void walk(){
+                          System.out.println("chicken can walk on 2 legs")}
+                          }
+                          public class Oops
+                          {
+                          public static void main(String []arg)
+                          {
+                          Dog d = new Dog();
+                          d.walk();
+                          Chicken c= new Chcicken();
+                          c.walk();
+                          }
+                          }
+                          // output be like
+                point to noted in abstract class ::>
+                1. An abstract class can declare wth the abstract keyword,
+                2. It can have abstrach and non-abstract method.
+                3. it can not be instantiate
+                4. It can have constractor and static method also.
+                5. It can have final method which can force the subclass 
+                   not to change the body of the method.
+          2. Interface  : 
+                          Interface are in java are similar to a normal class but            
+                          in this you can achieve 100% abstraction here all the 
+                          method in the interface are abstract method
+                          in this we use "implements" keyword get the property of 
+                          the interface.
+                          example:>
+                          interface Animal()
+                          {
+                          public void walk();
+                          }
+                          inteface Herbivore
+                          {
+                          }
+                          class Dog implements Animal,Herbivore
+                          {
+                          public void walk()
+                          {
+                          System.out.println("dog can walk");
+                          }
+                          }
+                          class Chicken implements Animal
+                          {
+                          public void walk()
+                          {
+                          System.out.println("chicken can walk");
+                          }
+                          }
+                          public class Oops
+                          {
+                          public static void main(String []arg)
+                          {
+                          Dog d = new Dog();
+                          d.walk();
+                          Chicken c = new Chicken();
+                          c.walk();
+                          }
+                          }
+                          // output::>
+                            dog can walk
+                            chicken can walk
+                            
+                            imortant point to be noted::>
+                            1. All the field are in Interface are public , final and static 
+                            by default.
+                            2. All the mthods are public and abstract by default.
+                            3. A class that implements interface must declare all the method
+                               exist in the interface.
+                            4. Interface supprot the functionality of the multiple inheritance.
+       
+       Static keyword::>
+          the "static" keyword in Java is used to declare a variable or method as belonging
+          to the class itself, rather than to an instance of the class. This allows you to 
+          access the variable or method directly
+          through the class, without having to create an instance of the class first.
+          Example:>
+          class Student {
+            String name;
+            static String school;
+          }
+          public class Oops {
+            public static void main(String [] arg){
+            Student.school= "GIC";
+            Student st = new Student();
+            st.name="ram";
+           System.out.println(st.school);
+            }
+            }
+            
+>>>>>>> a27433e540323a6932a117bd89cca7c0d9d676b0
