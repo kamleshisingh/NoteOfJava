@@ -148,6 +148,10 @@ Pollymorphism:>
           features and ignoring the non-essential details.
           we can acheive abstraction by to methods:>
           1. Abstract class: 
+						An abstract class is a class that is declared with the keyword 
+						"abstract" and contains one or more abstract methods, which are
+						 declared without implementation. An abstract class is intended
+						 to be subclassed and implemented by its concrete subclasses.
                           in this you can acheiver 0 to 100% of abstraction
                           means not all the method  are abstract method in the abstract class.
                           example:>
@@ -261,5 +265,64 @@ Pollymorphism:>
            System.out.println(st.school);
             }
             }
-            
+
+What is super?
+"super" in java is a keyword to use to access the properties of the parent class
+	example :> 
+	class Parent{
+		int age;
+		int name;
+		public Parent()
+		{
+			System.out.println("parent class constructer");
+		}
+	}
+	class Child extends Parent
+	{	
+		
+		public Child(int age , String name)
+		{
+			super(age,name);
+			System.out.println("child constructor");
+			
+		}
+		public void pMeth()
+		{
+			System.out.println("I am child class method");
+		}			
+	}	
+	public class MainClass{
+		public staic void main(String[]arg)
+		{
+			Parent p = new Parent();
+			Child c = new Child(25,"Parent");		
+		}
+	} 
+
+Must Read This:::>>>
+In the statement `Shape rectangle = new Rectangle(5, 10);`, 
+you are creating an object of the `Rectangle` class and assigning
+it to a variable of type `Shape`. This is an example of polymorphism
+in Java, where you can create objects of a subclass and assign them 
+to a variable of the superclass type.
+
+However, since the variable `rectangle` is of type `Shape`, you will 
+only be able to access the methods and properties that are defined in 
+the `Shape` class, not the methods and properties that are specific to 
+the `Rectangle` class. In other words, you won't be able to call the
+`getArea()` method on the `rectangle` variable, because it is not defined
+ in the `Shape` class.
+
+If you want to call the `getArea()` method on the `rectangle` object, you 
+need to declare the `rectangle` variable as type `Rectangle`, like this: 
+`Rectangle rectangle = new Rectangle(5, 10);`. This will allow you to access 
+all the methods and properties that are defined in the `Rectangle` class.
+
+So, if you change `Rectangle rectangle = new Rectangle(5, 10);` to `Shape 
+rectangle = new Rectangle(5, 10);`, you will still create an object of the 
+`Rectangle` class, but you will only be able to access the methods and 
+properties that are defined in the `Shape` class. If you want to access 
+the methods and properties that are specific to the `Rectangle` class, 
+you need to cast the `rectangle` variable to type `Rectangle`, like 
+this: `((Rectangle) rectangle).getArea();`.     
 >>>>>>> a27433e540323a6932a117bd89cca7c0d9d676b0
