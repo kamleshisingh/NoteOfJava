@@ -1,6 +1,12 @@
 what is java?
 java is an object oriented programing language.
 
+What is object in java ?
+An object is a real time entity which have some state and behavior .
+In java object is an instance of a class having instance variable as a 
+State and methods as a behavior of the object. And  we use new keyword 
+create the object .
+
 What is "new" keyword in the java code?
 In Java, the "new" keyword is used to create an object of a 
 class. It is used to allocate memory space for the object 
